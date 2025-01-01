@@ -1,12 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 //rotate array by one places
-vector<int> rotatearray(vector<int> &arr,int n){
-	int temp =arr[0];
+vector<int> rotatearray(vector<int> &nums,int n){
+	int temp =nums[0];
 	for(int i=1;i<n;i++){
-	arr[i-1] = arr[i];
+	nums[i-1] = nums[i];
 	}
-	arr[n-1]=temp;
+	nums[n-1]=temp;
 	return arr;
 }
 //rotate an array by D places to the right
@@ -35,7 +35,7 @@ int main(){
 	vector <int> nums(n);
 	cin >>k;
 	for(int i=0;i<n;i++) cin >> nums[i];
-//	nums = rotatearray(nums,k);
+//	nums = rotatearray(nums,n);
 	nums = leetcode189(nums,k);
 //	nums= rotate(nums,k);
 	for(int i=0;i<n;i++) cout << nums[i];
